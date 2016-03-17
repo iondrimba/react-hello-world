@@ -7,7 +7,7 @@ var gulpsync = require('gulp-sync')(gulp);
 gulp.task('browserify', require('./tasks/browserify.js'));
 
 //eslint task
-gulp.task('lint', require('./tasks/eslint.js'));
+gulp.task('eslint', require('./tasks/eslint.js'));
 
 //scss lint task
 gulp.task('scsslint', require('./tasks/scss-lint.js'));

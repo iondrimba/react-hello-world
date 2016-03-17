@@ -10,11 +10,10 @@ class Menu {
         let view = this.app.compile(template);
         view = view(this.model);
         return view;
-    };
+    }
     render() {
 
-    };
-};
-
+    }
+}
 
 export default Menu;
