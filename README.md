@@ -2,7 +2,7 @@
 
 Playing around React
 
-[![Travis build status](https://travis-ci.org/iondrimba/react-hello-world.svg?branch=master)](https://travis-ci.org/iondrimba/react-hello-world) [![Coverage Status](https://coveralls.io/repos/github/iondrimba/react-hello-world/badge.svg?branch=master)](https://coveralls.io/github/iondrimba/react-hello-world?branch=master)
+[![Travis build status](https://travis-ci.org/iondrimba/react-hello-world.svg?branch=master)](https://travis-ci.org/iondrimba/react-hello-world)
 
 
 #### Requires:
