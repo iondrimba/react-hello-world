@@ -37885,6 +37885,8 @@ module.exports = require('./lib/React');
 },{"./lib/React":27}],160:[function(require,module,exports){
 'use strict';
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require('../../node_modules/react/dist/react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -37895,31 +37897,143 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } // import page from '../../node_modules/page/page';
-// import handlebars from '../../node_modules/handlebars/dist/handlebars';
-// import jquery from '../../node_modules/jquery/dist/jquery';
-// import Controller from './core/controller';
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var App = function App() {
     _classCallCheck(this, App);
 
-    // this.$ = jquery;
-    // this.router = page;
-    // this.handlebars = handlebars;
-    // this.controller = new Controller(this);
-    // this.controller.start();
-    _reactDom2.default.render(_react2.default.createElement(
-        'h1',
-        null,
-        'Hello, world!'
-    ), document.getElementById('example'));
-}
-// //encapsulating template engine so its easy to change
-// compile(template) {
-//     return this.handlebars.compile(template);
-// }
-;
+    var ComponentBusca = function (_React$Component) {
+        _inherits(ComponentBusca, _React$Component);
+
+        function ComponentBusca() {
+            _classCallCheck(this, ComponentBusca);
+
+            return _possibleConstructorReturn(this, Object.getPrototypeOf(ComponentBusca).apply(this, arguments));
+        }
+
+        _createClass(ComponentBusca, [{
+            key: 'componentWillMount',
+            value: function componentWillMount() {
+                console.log('Busca componentWillMount');
+                return true;
+            }
+        }, {
+            key: 'componentDidMount',
+            value: function componentDidMount() {
+                console.log('Busca componentDidMount');
+                return true;
+            }
+        }, {
+            key: 'render',
+            value: function render() {
+                console.log('Busca render');
+                return _react2.default.createElement(
+                    'div',
+                    null,
+                    ' ',
+                    _react2.default.createElement('input', { type: 'text',
+                        placeholder: 'Search',
+                        value: '' }),
+                    ' ',
+                    _react2.default.createElement(
+                        'button',
+                        { type: 'button' },
+                        ' Buscar '
+                    ),
+                    ' '
+                );
+            }
+        }]);
+
+        return ComponentBusca;
+    }(_react2.default.Component);
+
+    var ComponentUser = function (_React$Component2) {
+        _inherits(ComponentUser, _React$Component2);
+
+        function ComponentUser() {
+            _classCallCheck(this, ComponentUser);
+
+            return _possibleConstructorReturn(this, Object.getPrototypeOf(ComponentUser).apply(this, arguments));
+        }
+
+        _createClass(ComponentUser, [{
+            key: 'componentWillMount',
+            value: function componentWillMount() {
+                console.log('User componentWillMount');
+                return true;
+            }
+        }, {
+            key: 'componentDidMount',
+            value: function componentDidMount() {
+                console.log('User componentDidMount');
+                return true;
+            }
+        }, {
+            key: 'render',
+            value: function render() {
+                console.log('User render');
+                return _react2.default.createElement(
+                    'p',
+                    null,
+                    ' User ',
+                    this.props.name,
+                    ' '
+                );
+            }
+        }]);
+
+        return ComponentUser;
+    }(_react2.default.Component);
+
+    var Main = function (_React$Component3) {
+        _inherits(Main, _React$Component3);
+
+        function Main() {
+            _classCallCheck(this, Main);
+
+            return _possibleConstructorReturn(this, Object.getPrototypeOf(Main).apply(this, arguments));
+        }
+
+        _createClass(Main, [{
+            key: 'componentWillMount',
+            value: function componentWillMount() {
+                console.log('App componentWillMount');
+                return true;
+            }
+        }, {
+            key: 'componentDidMount',
+            value: function componentDidMount() {
+                console.log('App componentDidMount');
+                return true;
+            }
+        }, {
+            key: 'render',
+            value: function render() {
+                console.log('App render');
+                return _react2.default.createElement(
+                    'div',
+                    null,
+                    _react2.default.createElement(ComponentBusca, null),
+                    _react2.default.createElement(ComponentUser, null),
+                    ' '
+                );
+            }
+        }]);
+
+        return Main;
+    }(_react2.default.Component);
+
+    ComponentUser.propTypes = { name: _react2.default.PropTypes.string.isRequired };
+    ComponentUser.defaultProps = { name: 'Ion' };
+    Main.propTypes = { name: _react2.default.PropTypes.string.isRequired };
+
+    _reactDom2.default.render(_react2.default.createElement(Main, { name: 'John' }), document.getElementById('example'));
+};
 
 window.app = new App();
 

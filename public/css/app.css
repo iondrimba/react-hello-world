@@ -382,6 +382,9 @@ button {
   font-size: inherit;
   text-decoration: none; }
 
+input {
+  padding: 8px; }
+
 a:hover,
 button:hover {
   background-color: #074FBB;

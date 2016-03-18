@@ -13,6 +13,7 @@
 	    "es6": true,
 	    "node": true
 	},
+	
 	"ecmaFeatures": {
 	    "arrowFunctions": true,
 	    "modules": true
@@ -24,6 +25,7 @@
 	"rules": {
 	    "eqeqeq": 1,
 	    "curly": 2,
+	    "no-console": [2, { allow: ["log", warn", "error"] }],
 	    "quotes": [2, 'single']
 	}
 }

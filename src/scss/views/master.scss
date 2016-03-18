@@ -11,6 +11,10 @@ button {
     @include button();
 }
 
+input {
+    padding: 8px;
+}
+
 a:hover,
 button:hover {
     @include button-hover();
