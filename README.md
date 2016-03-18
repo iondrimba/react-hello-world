@@ -34,7 +34,7 @@ Fooling around with React.
 
 #### Testing:
 
-* $ npm test
+* npm test (not working yet)
 
 #### Includes:
 
@@ -42,8 +42,8 @@ Fooling around with React.
 * ES6 transpile via Babel
 * BrowserSync
 * Browserify
-* Karma 
-* Jasmine 
+* Karma
+* Jasmine
 * Code Coverage
 * Sass
 * ESLint
