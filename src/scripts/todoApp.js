@@ -26,7 +26,7 @@ class TodoApp extends React.Component {
             }
             ],
             filteredCount:3,
-            filter:'todos'
+            filter:'all'
         };
 
         this.onAdd = this.onAddTodo.bind(this);
@@ -47,8 +47,8 @@ class TodoApp extends React.Component {
         selected.completed=!todo.completed;
 
         let count = this.getCount(this.state.todos);
-        if(count==0 && this.state.filter==='completos') {
-            this.setState({todos:this.state.todos, filter:'todos'});
+        if(count==0 && this.state.filter==='completed') {
+            this.setState({todos:this.state.todos, filter:'all'});
         }else{
             this.setState({todos:this.state.todos, count:count});
         }
@@ -56,7 +56,7 @@ class TodoApp extends React.Component {
     }
     getCount(array){
         let count = 0;
-        if(this.state.filter==='completos') {
+        if(this.state.filter==='completed') {
             array.map(function(item){
                 if(item.completed===true){
                     count++;

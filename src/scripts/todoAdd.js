@@ -51,16 +51,7 @@ class TodoAdd extends React.Component {
         this.props.onAdd(this.state.name);
         this.setState({ name: '', enabled:false });
     }
-    componentWillMount() {
-        //console.log('TodoAdd componentWillMount');
-        return true;
-    }
-    componentDidMount() {
-        //console.log('TodoAdd componentDidMount');
-        return true;
-    }
     render() {
-        //console.log('TodoAdd render');
         return (
             <div className="add-comp">
                 < input type="text" onChange={this.onChange}  placeholder="todo" value={this.state.name}/>

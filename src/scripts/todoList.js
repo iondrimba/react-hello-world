@@ -6,15 +6,9 @@ class TodoList extends React.Component {
         super(props);
         this.props=props;
     }
-    componentWillMount() {
-        return true;
-    }
-    componentDidMount() {
-        return true;
-    }
     filterIntes() {
         let itens=[];
-        if(this.props.filter==='completos') {
+        if(this.props.filter==='completed') {
             this.props.todos.map(function(todo) {
                 if( todo.completed) {
                     itens.push(todo);

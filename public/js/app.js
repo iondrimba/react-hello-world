@@ -19597,21 +19597,8 @@ var TodoAdd = function (_React$Component) {
             this.setState({ name: '', enabled: false });
         }
     }, {
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            //console.log('TodoAdd componentWillMount');
-            return true;
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            //console.log('TodoAdd componentDidMount');
-            return true;
-        }
-    }, {
         key: 'render',
         value: function render() {
-            //console.log('TodoAdd render');
             return _react2.default.createElement(
                 'div',
                 { className: 'add-comp' },
@@ -19692,7 +19679,7 @@ var TodoApp = function (_React$Component) {
                 id: 2
             }],
             filteredCount: 3,
-            filter: 'todos'
+            filter: 'all'
         };
 
         _this.onAdd = _this.onAddTodo.bind(_this);
@@ -19719,8 +19706,8 @@ var TodoApp = function (_React$Component) {
             selected.completed = !todo.completed;
 
             var count = this.getCount(this.state.todos);
-            if (count == 0 && this.state.filter === 'completos') {
-                this.setState({ todos: this.state.todos, filter: 'todos' });
+            if (count == 0 && this.state.filter === 'completed') {
+                this.setState({ todos: this.state.todos, filter: 'all' });
             } else {
                 this.setState({ todos: this.state.todos, count: count });
             }
@@ -19729,7 +19716,7 @@ var TodoApp = function (_React$Component) {
         key: 'getCount',
         value: function getCount(array) {
             var count = 0;
-            if (this.state.filter === 'completos') {
+            if (this.state.filter === 'completed') {
                 array.map(function (item) {
                     if (item.completed === true) {
                         count++;
@@ -19802,12 +19789,12 @@ var TodoFilter = function (_React$Component) {
     _createClass(TodoFilter, [{
         key: 'onClickItemTodos',
         value: function onClickItemTodos() {
-            this.props.onFilter('todos');
+            this.props.onFilter('all');
         }
     }, {
         key: 'onClickItemCompletos',
         value: function onClickItemCompletos() {
-            this.props.onFilter('completos');
+            this.props.onFilter('completed');
         }
     }, {
         key: 'isActive',
@@ -19828,13 +19815,13 @@ var TodoFilter = function (_React$Component) {
                 { className: 'todo-filter' },
                 _react2.default.createElement(
                     'button',
-                    { className: this.isActive('todos', this.props.filter), onClick: this.onClickTodos, type: 'button' },
-                    'Todos'
+                    { className: this.isActive('all', this.props.filter), onClick: this.onClickTodos, type: 'button' },
+                    'all'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { className: this.isActive('completos', this.props.filter), onClick: this.onClickCompletos, type: 'button' },
-                    'Completos'
+                    { className: this.isActive('completed', this.props.filter), onClick: this.onClickCompletos, type: 'button' },
+                    'completed'
                 )
             );
         }
@@ -19887,18 +19874,6 @@ var TodoItem = function (_React$Component) {
     }
 
     _createClass(TodoItem, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            //console.log('TodoItem componentWillMount');
-            return true;
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            //console.log('TodoItem componentDidMount');
-            return true;
-        }
-    }, {
         key: 'onClickItem',
         value: function onClickItem() {
             this.props.onClick(this.todo);
@@ -19917,7 +19892,6 @@ var TodoItem = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            console.log('TodoItem render', this.todo);
             return _react2.default.createElement(
                 'li',
                 { className: this.isCompletedCSS(), onClick: this.onClick },
@@ -19972,20 +19946,10 @@ var TodoList = function (_React$Component) {
     }
 
     _createClass(TodoList, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            return true;
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            return true;
-        }
-    }, {
         key: 'filterIntes',
         value: function filterIntes() {
             var itens = [];
-            if (this.props.filter === 'completos') {
+            if (this.props.filter === 'completed') {
                 this.props.todos.map(function (todo) {
                     if (todo.completed) {
                         itens.push(todo);

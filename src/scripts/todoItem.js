@@ -10,14 +10,6 @@ class TodoItem extends React.Component {
             completed:this.todo.completed
         }
     }
-    componentWillMount() {
-        //console.log('TodoItem componentWillMount');
-        return true;
-    }
-    componentDidMount() {
-        //console.log('TodoItem componentDidMount');
-        return true;
-    }
     onClickItem() {
         this.props.onClick(this.todo);
     }
@@ -31,7 +23,6 @@ class TodoItem extends React.Component {
         return className;
     }
     render() {
-        console.log('TodoItem render', this.todo);
         return (
             <li className={this.isCompletedCSS()} onClick={this.onClick}>{this.todo.label}</li>
         );

@@ -8,10 +8,10 @@ class TodoFilter extends React.Component {
         this.onClickCompletos = this.onClickItemCompletos.bind(this);
     }
     onClickItemTodos() {
-        this.props.onFilter('todos');
+        this.props.onFilter('all');
     }
     onClickItemCompletos() {
-        this.props.onFilter('completos');
+        this.props.onFilter('completed');
     }
     isActive(className, filter) {
         let css = className;
@@ -25,8 +25,8 @@ class TodoFilter extends React.Component {
     render() {
         return (
             <div className="todo-filter">
-                <button className={this.isActive('todos',this.props.filter)} onClick={this.onClickTodos} type="button">Todos</button>
-                <button className={this.isActive('completos',this.props.filter)} onClick={this.onClickCompletos} type="button">Completos</button>
+                <button className={this.isActive('all',this.props.filter)} onClick={this.onClickTodos} type="button">all</button>
+                <button className={this.isActive('completed',this.props.filter)} onClick={this.onClickCompletos} type="button">completed</button>
             </div>
         );
     }
