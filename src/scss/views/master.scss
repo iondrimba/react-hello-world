@@ -13,16 +13,22 @@ button {
 
 input {
     padding: 8px;
+
+    color: #444;
 }
 
 a:hover,
-button:hover {
+button:hover:not(.disabled):not(:focus) {
     @include button-hover();
 }
 
 a:active,
 button:active {
     @include button-active();
+}
+
+button.active {
+    @include button-focus();
 }
 
 a:focus,
@@ -53,4 +59,25 @@ hr {
 .content-show {
     opacity: 1;
     transition: all .5s;
+}
+
+
+.add-comp {
+    margin-bottom:20px;
+}
+
+.todoItem {
+    cursor: pointer;
+}
+.todo-list {
+    margin-bottom:20px;
+}
+.todo-filter {
+    button:first-child {
+        margin-right: 20px;
+    }
+}
+.completed {
+    text-decoration: line-through;
+    color:green;
 }

@@ -1,0 +1,11 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+	"editor.formatOnType": true,
+    "editor.wrappingColumn": 0 ,
+	"javascript.validate.enable": false,	
+	"javascript.format.insertSpaceAfterCommaDelimiter": false,
+	"javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+	"javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+	"javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+	"javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false
+}

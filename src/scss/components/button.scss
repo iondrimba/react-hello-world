@@ -2,7 +2,7 @@
     padding: 10px;
     background-color: #0066FF;
     color: white;
-    border-radius: 2px;
+    border-radius: 0;
     border: none;
     text-transform: uppercase;
     cursor: pointer;
@@ -27,4 +27,14 @@
     outline: none;
     background-color: #35FD58;
     color: #072F14;
+}
+
+.disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.disabled {
+    background-color: gray;
+    cursor: not-allowed;
 }

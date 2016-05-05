@@ -40,7 +40,7 @@ gulp.task('coveralls', require('./tasks/coveralls.js'));
 gulp.task('browser-sync', require('./tasks/browser-sync.js'));
 
 // Default Task
-gulp.task('default', gulpsync.sync(['scsslint', 'sass',  'browserify', 'browser-sync', 'watch']));
+gulp.task('default', gulpsync.sync(['scsslint', 'sass',  'browserify', 'watch', 'browser-sync']));
 
 //optimization task isolated because of the asynchronous problems gulp has
 gulp.task('optimize', gulpsync.sync(['minify-css', 'html-min', 'uglify', 'imagemin']));
