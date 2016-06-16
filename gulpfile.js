@@ -32,3 +32,5 @@ gulp.task('browser-sync', require('./tasks/browser-sync.js'));
 
 // Default Task
 gulp.task('default', gulpsync.sync(['scsslint', 'sass', 'browserify', 'watch', 'browser-sync']));
+
+gulp.task('deploy', gulpsync.sync(['scsslint', 'sass', 'browserify', 'minify-css', 'post-css']));

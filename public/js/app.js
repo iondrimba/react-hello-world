@@ -19882,8 +19882,6 @@ var TodoApp = function (_React$Component) {
             filter: 'all'
         };
 
-        console.log('OLA 222');
-
         _this.onAdd = _this.onAddTodo.bind(_this);
         _this.onFilter = _this.onFilterTodo.bind(_this);
         _this.onClick = _this.onClickItem.bind(_this);
