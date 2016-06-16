@@ -10,6 +10,5 @@ before_install:
  - npm install promise
 before_script:
   - npm install -g gulp
-script: 
- - gulp deploy
- - gulp optimize
+script:
+ - gulp

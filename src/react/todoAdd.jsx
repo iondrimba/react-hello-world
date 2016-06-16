@@ -55,7 +55,7 @@ class TodoAdd extends React.Component {
         return (
             <div className="add-comp">
                 <input type="text" onChange={this.onChange}  placeholder="todo" value={this.state.name}/>
-                <button type="button" className={this.isEnabledCss() } disabled={this.disableButton() } onClick={this.onClick}>Add</button>
+                <button type="button" className={this.isEnabledCss()} disabled={this.disableButton()} onClick={this.onClick}>Add</button>
             </div >
         );
     }
