@@ -5,12 +5,13 @@ environment:
     - nodejs_version: "4.2.2"
 install:
   - ps: Install-Product node $env:nodejs_version
+  - rm -rf node_modules
+  - npm i
   - gem install sass
   - gem install ruby
   - gem install scss_lint
   - npm install -g npm
   - npm install gulp -g
-  - npm install
   - npm install promise
 test_script:
   - gulp deploy
