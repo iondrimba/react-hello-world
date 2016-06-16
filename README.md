@@ -2,7 +2,7 @@
 
 Playing around React
 
-[![Travis build status](https://travis-ci.org/iondrimba/react-hello-world.svg?branch=master)](https://travis-ci.org/iondrimba/react-hello-world) [![Build status](https://ci.appveyor.com/api/projects/status/4ij79tgge78q3lvl?svg=true)](https://ci.appveyor.com/project/iondrimba/react-hello-world)
+[![Travis build status](https://travis-ci.org/iondrimba/react-hello-world.svg?branch=master)](https://travis-ci.org/iondrimba/react-hello-world) [![Build status](https://ci.appveyor.com/api/projects/status/294t79bmjs9movsf/branch/master?svg=true)](https://ci.appveyor.com/project/iondrimba/react-hello-world/branch/master)
 
 
 #### Requires:
