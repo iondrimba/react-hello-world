@@ -37,7 +37,7 @@ class TodoApp extends React.Component {
     }
     onAddTodo(text) {
         this.state.todos.push({label:text, completed:false, id:this.state.todos.length});
-        this.setState({todos:this.state.todos});
+        this.setState({todos:this.state.todos, filter:'all'});
     }
     onClickItem(todo) {
         todo.completed = !todo.completed;
