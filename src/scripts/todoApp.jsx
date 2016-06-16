@@ -30,8 +30,6 @@ class TodoApp extends React.Component {
             filter:'all'
         };
 
-        console.log('OLA 333');
-
         this.onAdd = this.onAddTodo.bind(this);
         this.onFilter = this.onFilterTodo.bind(this);
         this.onClick = this.onClickItem.bind(this);
