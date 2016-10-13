@@ -38,7 +38,7 @@ gulp.task('server', require('./tasks/server.js'));
 
 
 // Default Task
-gulp.task('default', gulpsync.sync(['scsslint', 'sass', 'bundle', 'server', 'watch']));
+gulp.task('default', gulpsync.sync(['scsslint', 'sass', 'bundle', 'browser-sync', 'watch']));
 //gulp.task('default', gulpsync.sync(['scsslint', 'sass', 'browserify', 'watch', 'browser-sync']));
 
 gulp.task('deploy', gulpsync.sync(['scsslint', 'sass', 'browserify', 'minify-css', 'post-css']));

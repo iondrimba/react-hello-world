@@ -11,7 +11,7 @@ class TodoApp extends React.Component {
         this.state = {
             todos:[
             {
-                label:'aaa',
+                label:'aaa11',
                 completed:false,
                 id:0
             },

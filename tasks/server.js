@@ -3,7 +3,6 @@ var gutil = require("gulp-util");
 var webpack = require("webpack");
 var WebpackDevServer = require("webpack-dev-server");
 var webpackConfig = require("../webpack.config.js");
-var stream = require('webpack-stream');
 
 module.exports = function() {
 
