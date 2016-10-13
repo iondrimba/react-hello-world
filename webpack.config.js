@@ -2,9 +2,9 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-	cache: true,
-	debug: true,
-	devtool: 'eval',
+	// cache: true,
+	// debug: true,
+	// devtool: 'eval',
 	entry: './src/scripts/app.jsx',
 	output: {
 		path: path.join(__dirname, "/js"),
@@ -21,6 +21,18 @@ module.exports = {
 		}]
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.optimize.DedupePlugin(),
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: true
+			},
+			comments: false
+		}),
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify('production')
+			}
+		})
 	]
 };
