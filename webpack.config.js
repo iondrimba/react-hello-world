@@ -1,13 +1,15 @@
 var path = require('path');
 var webpack = require('webpack');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
 	// cache: true,
-	// debug: true,
-	// devtool: 'eval',
+	debug: true,
+	devtool: 'eval',
 	entry: './src/scripts/app.jsx',
 	output: {
-		path: path.join(__dirname, "/js"),
+		path: path.join(__dirname, '/public/js'),
+		publicPath: './public/js', // instead of publicPath: '/build/' 
 		filename: 'bundle.js'
 	},
 	module: {
@@ -19,6 +21,10 @@ module.exports = {
 				presets: ['es2015', 'react']
 			}
 		}]
+	},
+	devServer: {
+		contentBase: './public/',
+		inline: true
 	},
 	plugins: [
 		new webpack.optimize.DedupePlugin(),
