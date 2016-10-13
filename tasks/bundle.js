@@ -5,7 +5,6 @@ var webpackConfig = require("../webpack.config.js");
 
 module.exports = function() {
 	return gulp.src('src/scripts/app.jsx')
-		.pipe(stream(webpackConfig))
-		//.pipe(webpack(require('../webpack.config.js')))
+		.pipe(webpack(require('../webpack.config.js')))
 		.pipe(gulp.dest('public/js/'));
 };
