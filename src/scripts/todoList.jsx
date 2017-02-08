@@ -6,26 +6,26 @@ class TodoList extends React.Component {
         super(props);
         this.props=props;
     }
-    filterIntes() {
-        let itens=[];
+    filterItems() {
+        let items=[];
         if(this.props.filter==='completed') {
             this.props.todos.map(function(todo) {
                 if( todo.completed) {
-                    itens.push(todo);
+                    items.push(todo);
                 }
             });
         }else{
-            itens = this.props.todos;
+            items = this.props.todos;
         }
 
-        return itens;
+        return items;
     }
     render() {
-        let itens = this.filterIntes();
+        let items = this.filterItems();
 
         return (
             <div className="todo-list">{
-                    itens.map(function(todo) {
+                    items.map(function(todo) {
                         return (
                             <TodoItem key={todo.id} todo={todo} onClick={this.props.onClick}/>
                         );
